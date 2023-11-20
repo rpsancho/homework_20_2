@@ -4,23 +4,15 @@
     "pk": 1,
     "fields": {
       "name": "удобрения",
-      "description": "чтоб росло"
+      "description": ""
     }
   },
   {
     "model": "catalog.category",
     "pk": 2,
     "fields": {
-      "name": "разозления",
-      "description": "чтоб бесило"
-    }
-  },
-  {
-    "model": "catalog.category",
-    "pk": 3,
-    "fields": {
-      "name": "бесполезное",
-      "description": "чтоб было"
+      "name": "инвентарь",
+      "description": ""
     }
   },
   {
@@ -28,8 +20,8 @@
     "pk": 1,
     "fields": {
       "name": "навоз",
-      "description": "воняет, за то натуральный",
-      "preview": "products/sa-14.jpg",
+      "description": "удобрение на любителя",
+      "preview": "",
       "category": 1,
       "price": 300.0,
       "creation_date": "2023-11-14",
@@ -53,10 +45,10 @@
     "model": "catalog.product",
     "pk": 3,
     "fields": {
-      "name": "пакет без дна",
-      "description": "непонятно что с этим делать, пусть будет",
+      "name": "тяпка",
+      "description": "чтобы тяпать",
       "preview": "",
-      "category": 3,
+      "category": 2,
       "price": 1.0,
       "creation_date": "2023-11-14",
       "last_change_date": "2023-11-14"
@@ -66,10 +58,10 @@
     "model": "catalog.product",
     "pk": 4,
     "fields": {
-      "name": "разряженная батарейка",
-      "description": "пусть полежит",
+      "name": "лопата",
+      "description": "чтобы копать",
       "preview": "",
-      "category": 3,
+      "category": 2,
       "price": 2.0,
       "creation_date": "2023-11-14",
       "last_change_date": "2023-11-14"
@@ -79,11 +71,24 @@
     "model": "catalog.product",
     "pk": 5,
     "fields": {
-      "name": "будильник",
-      "description": "чтоб бесить по утрам",
-      "preview": "products/na_budilnik.jpg",
+      "name": "перчатки",
+      "description": "чтобы руки оставались чистыми",
+      "preview": "",
       "category": 2,
       "price": 600.0,
+      "creation_date": "2023-11-14",
+      "last_change_date": "2023-11-14"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "тачка",
+      "description": "чтобы возить",
+      "preview": "",
+      "category": 2,
+      "price": 2000.0,
       "creation_date": "2023-11-14",
       "last_change_date": "2023-11-14"
     }
