@@ -5,9 +5,9 @@
   <h1 class="display-4">Farmer store</h1>
   <p class="lead">Farmer store - это... в общем...</p>
 </div>
+
 <div class="row text-center">
-  {% for object in object_list %}
-  <div class="col-3">
+  <div class="col-6">
     <div class="card mb-4 box-shadow">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">{{object.name}}</h4>
@@ -21,18 +21,17 @@
           </li>
           <li>
             <b>Превью</b><br>
-            <img src="{{ object.preview|mediapath }}" class="img-thumbnail" alt="...">
+            <img src="{% mediapath object.preview %}" class="img-thumbnail" alt="...">
           </li>
           <li>
             <b>Категория</b><br>
             {{object.category.name}}
           </li>
         </ul>
-        <a class="p-2 btn btn-outline-primary" href="/products/{{object.pk}}/">Подробно</a>
-        <a class="p-2 btn btn-outline-primary" href="/contacts/">Купить</a>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
       </div>
     </div>
   </div>
-  {% endfor %}
 </div>
+
 {% endblock %}
