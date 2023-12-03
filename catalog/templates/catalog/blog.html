@@ -1,0 +1,33 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+{% load tags %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Farmer store</h1>
+  <p class="lead">Farmer store - это... в общем...</p>
+</div>
+
+<a class="p-2 btn btn-outline-primary" href="/blog_create/">Создать запись</a>
+
+<div class="row text-center">
+  {% for object in object_list %}
+  <div class="col-3">
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{object.title}}</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+          <li>
+            {{object.content|slice:100}}
+          </li>
+          <li>
+            <img src="{{ object.preview|mediapath }}" class="img-thumbnail" alt="...">
+          </li>
+        </ul>
+        <a class="p-2 btn btn-outline-primary" href="/blog/{{object.pk}}/">Смотреть</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
